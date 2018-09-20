@@ -4,7 +4,7 @@
   "description": "",
   "main": "bin/run.js",
   "scripts": {
-    "test": "nyc mocha --recursive test",
+    "test": "nyc mocha --recursive test --exit",
     "start": "node bin/run"
   },
   "engines": {
