@@ -7,6 +7,13 @@
     "test": "nyc mocha --recursive test",
     "start": "node bin/run"
   },
+  "engines": {
+    "node" : "8.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:michaelmanteo/Microservices_tutorial_slackbot_iris-time.git"
+  },
   "author": "Michael N. Manteo",
   "license": "ISC",
   "dependencies": {
