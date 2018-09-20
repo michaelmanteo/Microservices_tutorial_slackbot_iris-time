@@ -10,7 +10,11 @@ module.exports = (config) => {
     let openCage_KEY= config.openCage_KEY; 
 
     service.get('/service/:location', (req, res) => {
-    
+        
+        if(req.get('X-IRIS-SERVICE-TOKEN') !== config.serviceAccessToken){
+            res.sendStatus(403);
+        }
+
         const PLACENAME = req.params.location;
         request.get('https://api.opencagedata.com/geocode/v1/json?q='+PLACENAME + '&key='+openCage_KEY, (err, response)=>{
             if(err) {
